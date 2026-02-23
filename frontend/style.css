@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+
+/* Animated Gradient Background */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff00cc);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.app {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.controls input, .controls select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 260px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.4s;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.read {
+    border: 2px solid #00ff88;
+}
+
+.unread {
+    border: 2px solid #ff4d6d;
+}
+
+/* Dark Theme */
+.dark {
+    background: #111;
+    color: white;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📚 Digital Library Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="app">
+
+    <h1>📚 Digital Library</h1>
+
+    <div class="controls">
+        <input type="text" id="title" placeholder="Book Title">
+        <input type="text" id="author" placeholder="Author">
+        <button onclick="addBook()">Add</button>
+
+        <input type="text" id="search" placeholder="Search..." oninput="applyFilters()">
+
+        <select id="filter" onchange="applyFilters()">
+            <option value="all">All</option>
+            <option value="read">Read</option>
+            <option value="unread">Unread</option>
+        </select>
+
+        <button onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div id="bookContainer" class="books"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
