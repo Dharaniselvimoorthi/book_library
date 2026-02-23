@@ -42,4 +42,7 @@ app.delete("/books/:id", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on 3000 🚀`));
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
